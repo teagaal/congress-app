@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MembersList from '../../components/MembersList/MembersList';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const CONGRESS_API = 'A4J8rnPWbg72kZBvcT7iFuQw8YtYWF7ZrKqkD1EV';
 const options = {
   headers: { 'X-API-Key': CONGRESS_API }
 };
 
-
-const Main = () => {
+const CongressView = () => {
   const [members, setMembers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -20,17 +21,20 @@ const Main = () => {
       setMembers(res.data.results[0].members);
       setIsLoading(false);
     }
-    getMembers(116, 'house')
+    getMembers(116, 'senate')
   }, [])
 
-  console.log(members, "main")
   return (
     <div>
-      {isLoading ?
-        <div>hola</div> : (<MembersList members={members} />)
-      }
+      <Header />
+      <main>
+        {isLoading ?
+          <p>hola</p> : (<MembersList members={members} />)
+        }
+      </main>
+      <Footer />
     </div>
   )
 };
 
-export default Main;
+export default CongressView;
