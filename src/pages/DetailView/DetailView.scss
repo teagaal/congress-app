@@ -4,16 +4,13 @@
   align-items: center;
 }
 
+.detail-container {
+  flex-grow: 1;
+}
+
 .header {
   text-align: center;
   flex-shrink: 0;
-}
-
-.main {
-  max-height: 80vh;
-  overflow-y: scroll;
-  flex: 1 0 auto;
-  margin: 16px;
 }
 
 .footer {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({className}) => {
   return (
-    <footer>
+    <footer className={className}>
       <p>
         Data provided by <a href="https://projects.propublica.org/api-docs/congress-api/">ProPublica's Congress API</a>.
       </p>

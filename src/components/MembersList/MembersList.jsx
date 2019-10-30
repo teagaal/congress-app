@@ -1,21 +1,26 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './MembersList.scss';
 
 const MembersList = ({ members }) => {
   console.log(typeof members, "hola")
   return (
-    <ul className="members-container">
+    <div className="members-container">
       {members.map(member => {
+        const location = {
+          pathname: '/detail',
+          state: {data: member}
+        }
         return (
-          <li key={member.id}>
+          <article key={member.id}>
             <p>{`${member.short_title} ${member.first_name} ${member.last_name}`}</p>
             <p>{`Party: ${member.party}`}</p>
             <p>{`State: ${member.state}`}</p>
-            <button>View detail</button>
-          </li>
+            <Link to={location}>View detail</Link>
+          </article>
         )
       })}
-    </ul>
+    </div>
   )
 };
 

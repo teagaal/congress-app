@@ -3,6 +3,7 @@ import axios from 'axios';
 import MembersList from '../../components/MembersList/MembersList';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import './CongressView.scss';
 
 const CONGRESS_API = 'A4J8rnPWbg72kZBvcT7iFuQw8YtYWF7ZrKqkD1EV';
 const options = {
@@ -25,14 +26,14 @@ const CongressView = () => {
   }, [])
 
   return (
-    <div>
-      <Header />
-      <main>
+    <div className="view-container">
+      <Header className="header" />
+      <main className="main">
         {isLoading ?
           <p>hola</p> : (<MembersList members={members} />)
         }
       </main>
-      <Footer />
+      <Footer className="footer" />
     </div>
   )
 };
