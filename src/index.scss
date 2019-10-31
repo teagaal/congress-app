@@ -1,11 +1,17 @@
-html, body, #root, #root>div {
+html,
+body,
+#root,
+#root>div {
   height: 100%
 }
 
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
