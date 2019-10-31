@@ -4,6 +4,7 @@ import MembersList from '../../components/MembersList/MembersList';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import './CongressView.scss';
+import Spinner from '../../components/Spinner/Spinner';
 
 const CONGRESS_API = 'A4J8rnPWbg72kZBvcT7iFuQw8YtYWF7ZrKqkD1EV';
 const options = {
@@ -30,7 +31,7 @@ const CongressView = () => {
       <Header className="header" />
       <main className="main">
         {isLoading ?
-          <p>hola</p> : (<MembersList members={members} />)
+          <Spinner/> : (<MembersList members={members} />)
         }
       </main>
       <Footer className="footer" />
