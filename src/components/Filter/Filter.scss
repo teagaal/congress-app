@@ -1,0 +1,18 @@
+.filter-container {
+  display: flex;
+  margin: 16px 0;
+}
+
+input {
+  margin: 0 8px;
+}
+
+@media only screen and (max-width: 480px) {
+  .filter-container {
+    flex-direction: column;
+  }
+
+  input {
+    display: block;
+  }
+}

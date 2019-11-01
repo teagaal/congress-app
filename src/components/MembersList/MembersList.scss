@@ -11,3 +11,17 @@
 li {
   list-style-type: none;
 }
+
+.members-article {
+  border: black 1px solid;
+  border-radius: 5%;
+  padding: 8px;
+  margin: 8px;
+}
+
+@media only screen and (max-width: 480px) {
+  .members-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

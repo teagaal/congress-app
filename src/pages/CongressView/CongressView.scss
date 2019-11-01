@@ -18,3 +18,14 @@
   text-align: center;
   flex-shrink: 0;
 }
+
+.search-container {
+  display: flex;
+}
+
+@media only screen and (max-width: 480px) {
+  .search-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
