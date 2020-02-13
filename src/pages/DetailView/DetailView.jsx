@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {useLocation, useHistory} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import './DetailView.scss';
@@ -13,10 +13,9 @@ const DetailView = () => {
     document.title = "Details"
   }, [])
 
-  console.log(location)
-  return(
+  return (
     <div className="view-container">
-    <Header className="header"/>
+      <Header className="header" />
       <article className="detail-container">
         <button onClick={() => history.goBack()}>Go Back</button>
         <h2>{`${member.short_title} ${member.first_name} ${member.last_name}`}</h2>
@@ -29,7 +28,7 @@ const DetailView = () => {
           <p>Facebook: {member.facebook_account}</p>
         </div>
       </article>
-      <Footer className="footer"/>
+      <Footer className="footer" />
     </div>
   )
 };
